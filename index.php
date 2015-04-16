@@ -17,20 +17,22 @@
 	</div><!--closing divider-->
 </body><!--closing html tag-->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script>
+<script>//opening script tag
 	add_task(); //calling the add task function
 
-	function add_task(){
-		$('.add-new-task').submit(function() {
+	function add_task(){//add task function
+		$('.add-new-task').submit(function() {//add new task and submit
 			var new_task = $('.add-new-task input [name=new-task').val();
 
-			if (new_task != '') {
-				$.post('includes/add-task.php', { task: new_task}, function(data) {
-					$(('add-new-task input[name=new-task]').val();
-						$(data).appendTo('task-list ul').hide().fadeIn();
+			if (new_task != '') {//if theres nothing
+				$.post('includes/add-task.php', {task: new_task}, function(data) {//post add task. task new task. 
+					$('add-new-task input[name=new-task]').val();//add new task input
+						$(data).appendTo('task-list ul').hide().fadeIn();//variable data append to task list ul hide and fade in
 				});
-			};
-		})
+			}
+			return false;//return false
+		});
 	}
-</script>
+</script><!--closing script tag-->
+
 </html><!--closing html tag-->
