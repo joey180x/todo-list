@@ -10,4 +10,13 @@
 
 	$query = "SELECT * FROM tasks WHERE task='$task' and date='$date' and time'$time' ";//query select from tasks where task and date and time
 
+	if ($result = $mysqli->query($query)) {
+		while ($row = $result->fetch_assoc())
+			$task_id = $row['id'];
+			$task_name = $row['task'];
+			]
+	}
+
+	$mysqli->close();
+	
 	?>
