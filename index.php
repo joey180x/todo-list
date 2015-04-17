@@ -16,7 +16,7 @@
 					if ($numrows>0) {//if number of rows is gretaer than 0
 						while($row = $result->fetch_assoc()){//fetch associated
 							$task_id = $row['id'];//task id
-							$task_name = $row["task"];//and task name
+							$task_name = $row['task'];//and task name
 
 							echo '<li>
 							<span>'.$task_name. '</span>
