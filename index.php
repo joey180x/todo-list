@@ -28,7 +28,7 @@
 
 				?>
 			</ul><!--closing ul tag-->
-		</div><!--closing divider-->
+		</div><!--closing divider  -->
 	<form class="add-new-task" autocomplete="off"><!--adding new task, turning autocomplete off-->
 		<input type="text" name="new-task" placeholder="Add new item.."/><!--new task-->
 	</form><!--closing form tag-->
