@@ -8,7 +8,24 @@
 	<div class="wrap"><!--A wrapper is an element, commonly a div, that encloses one or more other elements in the HTML markup-->
 		<div class="task-list">
 			<ul><!--opening unordered-list tag-->
-				<?php require("includes/connect.php"); ?><!--Requiring connect.php file to connect to database-->
+				<?php require("includes/connect.php");//Requiring connect.php file to connect to database
+				$mysqli = new mysqli('localhost', 'root', 'root', 'todo');//connecting to database
+				$query = "SELECT * FROM tasks ORDER BY date ASC, time ASC";//query information, order by date and time
+				if ($result = $mysqli->query($query)) {//if result is a query
+					$numrows = $result->num_rows;//number of rows
+					if ($numrows>0) {//if number of rows is gretaer than 0
+						while($row = $result->fetch_assoc()){//fetch associated
+							$task_id = $row['id'];//task id
+							$task_name = $row["task"];//and task name
+
+							echo "<li>
+							<span>''.$task_name'
+							";
+						}
+					}
+				}
+
+				?>
 			</ul><!--closing ul tag-->
 		</div><!--closing divider-->
 	<form class="add-new-task" autocomplete="off"><!--adding new task, turning autocomplete off-->
