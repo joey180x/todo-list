@@ -18,5 +18,7 @@
 	}
 
 	$mysqli->close();
+
+	echo '<li><span>'.task_name.'</span><img id"'.task.id.'" class="delete-button" width=10px" src"image/close.svg" /></li'>;
 	
 	?>
