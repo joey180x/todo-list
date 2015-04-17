@@ -2,7 +2,7 @@
 <html><!--opening html tag-->
 <head><!--header tag-->
 	<title>Simple To-Do List</title><!--adding title for webpage in tab-->
-	<link rel="stylesheet" type="text/css" href="css/main.css"><!--linking to main.css from css file-->
+	<link rel="stylesheet" href="css/main.css"><!--linking to main.css from css file-->
 </head><!--closing header tag-->
 <body><!--opening body tag-->
 	<div class="wrap"><!--A wrapper is an element, commonly a div, that encloses one or more other elements in the HTML markup-->
@@ -45,7 +45,7 @@
 			if (new_task != '') {//if theres nothing
 				$.post('includes/add-task.php', {task: new_task}, function(data) {//post add task. task new task. 
 					$('add-new-task input[name=new-task]').val();//add new task input
-						$(data).appendTo('task-list ul').hide().fadeIn();//variable data append to task list ul hide and fade in
+						$(data).appendTo('.task-list ul').hide().fadeIn();//variable data append to task list ul hide and fade in
 				});
 			}
 			return false;//return false

@@ -4,7 +4,6 @@
 	$mysqli = new mysqli('localhost', 'root', 'root', 'tasks');//new mysqli connection
 
 	if ($result = $mysqli->query("DELETE FROM tasks WHERE if='task_id'")) {//if result is a query delete task id
-		
 	}
 
  ?>
