@@ -43,7 +43,7 @@
 			var new_task = $('.add-new-task input [name=new-task').val();
 
 			if (new_task != '') {//if theres nothing
-				$.post('includes/add-task.php', {task: new_task}, function(data) {//post add task. task new task. 
+				$.post('includes/add-task.php', { task: new_task }, function(data) {//post add task. task new task. 
 					$('add-new-task input[name=new-task]').val();//add new task input
 						$(data).appendTo('.task-list ul').hide().fadeIn();//variable data append to task list ul hide and fade in
 				});
